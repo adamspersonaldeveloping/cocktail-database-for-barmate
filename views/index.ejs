@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add A Cocktail</h1>
+    <ul class="rappers">
+    <% for(let i=0; i < info.length; i++) {%>
+        <li class="rapper">
+            <span><%= info[i].name %></span>
+           <!-- <span><%= info[i].birthName %></span>-->
+            <span><%= info[i].likes %></span>
+            <span class='fa fa-thumbs-up'></span>
+            <span class='fa fa-trash'></span>
+        </li>
+    <% } %>
+    </ul>
+
+    <h2>Add A Drink:</h2>
+
+    <form action="/addCocktail" method="POST">
+        <input type="text" placeholder="Name" name="name">
+        <div class="ingredients-group">
+            <input type="text" placeholder="First Ingedient" name="ingredient1" class="ingredeints"> 
+            <input type="text" placeholder="Second Ingedient" name="ingredient2" class="ingredeints">
+            <input type="text" placeholder="Third Ingedient" name="ingredient3" class="ingredeints">
+            <input type="text" placeholder="Fourth Ingedient"  name="ingredient4" class="ingredeints">
+            <input type="text" placeholder="Fifth Ingedient" name="ingredient5" class="ingredeints">
+            <input type="text" placeholder="Sixth Ingedient" name="ingredient6" class="ingredeints">
+            <input type="text" placeholder="Seventh Ingedient" name="ingredient7" class="ingredeints">
+            <input type="text" placeholder="Eigth Ingedient" name="ingredient8" class="ingredeints">
+            <input type="text" placeholder="Nineth Ingedient" name="ingredient9" class="ingredeints">
+            <input type="text" placeholder="Tenth Ingedient" name="ingredient10" class="ingredeints">
+        </div>
+        <div class="measures-group">
+            <input type="text" placeholder="First Measurement" name="measurement1" class="measures"> 
+            <input type="text" placeholder="Second Measurement" name="measurement2" class="measures"> 
+            <input type="text" placeholder="Third Measurement" name="measurement3" class="measures"> 
+            <input type="text" placeholder="Fourth Measurement" name="measurement4" class="measures"> 
+            <input type="text" placeholder="Fifth Measurement" name="measurement5" class="measures"> 
+            <input type="text" placeholder="Sixth Measurement" name="measurement6" class="measures"> 
+            <input type="text" placeholder="Seventh Measurement" name="measurement7" class="measures"> 
+            <input type="text" placeholder="Eighth Measurement" name="measurement8" class="measures"> 
+            <input type="text" placeholder="Nineth Measurement" name="measurement9" class="measures"> 
+            <input type="text" placeholder="Tenth Measurement" name="measurement10" class="measures"> 
+        </div>
+        <input type="text" placeholder="garnish" name="garnish">
+        <input type="text" placeholder="Preperation/Method" name="preperation"> 
+        <input type="text" placeholder="img url" name="image">
+        <input type="text" placeholder="fun fact" name="funFact">
+        <input type="submit">
+    </form>
+    
+
+    <script src='js/main.js'></script>
+</body>
+</html>
