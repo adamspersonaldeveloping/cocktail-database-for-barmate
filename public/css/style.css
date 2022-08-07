@@ -2,8 +2,14 @@ h1{
     color: red;
 }
 form{
+    width: 90%;
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
+    align-content: space-around;
+    flex-wrap: wrap;
+    border: 2px black solid;
+   
 
 }
 .ingredients-group{
@@ -11,10 +17,17 @@ form{
     display: flex;
     flex-flow: column wrap;
     width: 45%;
+    
+   
 }
 .measures-group{
     border: 2px solid black;
     display: flex;
     flex-flow: column wrap;
     width: 45%;
+   
+}
+.form100{
+    margin: .6em;
+    width: 100%;
 }
