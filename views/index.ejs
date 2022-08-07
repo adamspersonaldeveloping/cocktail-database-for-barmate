@@ -18,7 +18,68 @@
     <title>Document</title>
 </head>
 <body>
+<div id="page-wrapper">
     <h1>Add A Cocktail</h1>
+    <form action="/addCocktail" method="POST">
+        <div class="row gtr-uniform">
+            <div class="col-12">
+                <label for="name">Name</label>
+                <input type="text" id="demo-name" value=""  placeholder="Name" name="name" />
+            </div>
+            
+                <div class="col-6 col-12-xsmall">
+                    <label for="ingredient1">Ingredients</label>
+                    <input type="text" placeholder="First Ingedient" name="ingredient1" class="ingredeints"> 
+                    <input type="text" placeholder="Second Ingedient" name="ingredient2" class="ingredeints">
+                    <input type="text" placeholder="Third Ingedient" name="ingredient3" class="ingredeints">
+                    <input type="text" placeholder="Fourth Ingedient"  name="ingredient4" class="ingredeints">
+                    <input type="text" placeholder="Fifth Ingedient" name="ingredient5" class="ingredeints">
+                    <input type="text" placeholder="Sixth Ingedient" name="ingredient6" class="ingredeints">
+                    <input type="text" placeholder="Seventh Ingedient" name="ingredient7" class="ingredeints">
+                    <input type="text" placeholder="Eigth Ingedient" name="ingredient8" class="ingredeints">
+                    <input type="text" placeholder="Nineth Ingedient" name="ingredient9" class="ingredeints">
+                    <input type="text" placeholder="Tenth Ingedient" name="ingredient10" class="ingredeints">
+                </div>
+                <div class="col-6 col-12-xsmall">
+                    <label for="measurement1">Measurements</label>
+                    <input type="text" placeholder="First Measurement" name="measurement1" class="measures"> 
+                    <input type="text" placeholder="Second Measurement" name="measurement2" class="measures"> 
+                    <input type="text" placeholder="Third Measurement" name="measurement3" class="measures"> 
+                    <input type="text" placeholder="Fourth Measurement" name="measurement4" class="measures"> 
+                    <input type="text" placeholder="Fifth Measurement" name="measurement5" class="measures"> 
+                    <input type="text" placeholder="Sixth Measurement" name="measurement6" class="measures"> 
+                    <input type="text" placeholder="Seventh Measurement" name="measurement7" class="measures"> 
+                    <input type="text" placeholder="Eighth Measurement" name="measurement8" class="measures"> 
+                    <input type="text" placeholder="Nineth Measurement" name="measurement9" class="measures"> 
+                    <input type="text" placeholder="Tenth Measurement" name="measurement10" class="measures"> 
+                </div>
+
+            
+            <div class="col-6 col-12-xsmall">
+                <label for="garnish">Garnish</label>
+                <input type="text" placeholder="garnish" name="garnish">
+            </div>
+            <div class="col-6 col-12-xsmall">
+                <label for="preperation">Preperation</label>
+                <input type="text" placeholder="Preperation/Method" name="preperation"> 
+            </div>
+            <div class="col-6 col-12-xsmall">
+                <label for="image">Image</label>
+                <input  type="text" placeholder="img url" name="image">
+            </div>
+            <div class="col-6 col-12-xsmall">
+                <label for="funFact">Fun Fact</label>
+                <input  type="text" placeholder="Fun Fact" name="funFact">
+            </div>
+            <ul class="actions">
+                <li>
+                    <input id="button1" class="button primary" type="submit">
+                </li>
+            </ul>
+            
+        </div>
+    </form>
+    
     <ul class="rappers">
     <% for(let i=0; i < info.length; i++) {%>
         <li class="rapper">
@@ -33,38 +94,8 @@
 
     <h2>Add A Drink:</h2>
 
-    <form action="/addCocktail" method="POST">
-        <input class="form100" type="text" placeholder="Name" name="name">
-        <div class="ingredients-group">
-            <input type="text" placeholder="First Ingedient" name="ingredient1" class="ingredeints"> 
-            <input type="text" placeholder="Second Ingedient" name="ingredient2" class="ingredeints">
-            <input type="text" placeholder="Third Ingedient" name="ingredient3" class="ingredeints">
-            <input type="text" placeholder="Fourth Ingedient"  name="ingredient4" class="ingredeints">
-            <input type="text" placeholder="Fifth Ingedient" name="ingredient5" class="ingredeints">
-            <input type="text" placeholder="Sixth Ingedient" name="ingredient6" class="ingredeints">
-            <input type="text" placeholder="Seventh Ingedient" name="ingredient7" class="ingredeints">
-            <input type="text" placeholder="Eigth Ingedient" name="ingredient8" class="ingredeints">
-            <input type="text" placeholder="Nineth Ingedient" name="ingredient9" class="ingredeints">
-            <input type="text" placeholder="Tenth Ingedient" name="ingredient10" class="ingredeints">
-        </div>
-        <div class="measures-group">
-            <input type="text" placeholder="First Measurement" name="measurement1" class="measures"> 
-            <input type="text" placeholder="Second Measurement" name="measurement2" class="measures"> 
-            <input type="text" placeholder="Third Measurement" name="measurement3" class="measures"> 
-            <input type="text" placeholder="Fourth Measurement" name="measurement4" class="measures"> 
-            <input type="text" placeholder="Fifth Measurement" name="measurement5" class="measures"> 
-            <input type="text" placeholder="Sixth Measurement" name="measurement6" class="measures"> 
-            <input type="text" placeholder="Seventh Measurement" name="measurement7" class="measures"> 
-            <input type="text" placeholder="Eighth Measurement" name="measurement8" class="measures"> 
-            <input type="text" placeholder="Nineth Measurement" name="measurement9" class="measures"> 
-            <input type="text" placeholder="Tenth Measurement" name="measurement10" class="measures"> 
-        </div>
-        <input class="form100" type="text" placeholder="garnish" name="garnish">
-        <input class="form100" type="text" placeholder="Preperation/Method" name="preperation"> 
-        <input class="form100" type="text" placeholder="img url" name="image">
-        <input class="form100" type="text" placeholder="fun fact" name="funFact">
-        <input type="submit">
-    </form>
+    
+</div>
     
 
     <script src='js/main.js'></script>
