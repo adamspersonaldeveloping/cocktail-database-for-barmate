@@ -28,6 +28,18 @@ app.get('/',(request, response)=>{
     })
     .catch(error => console.error(error))
 })
+//trying to set up console.log for data from api
+app.get('/displayInfo', async (request, response)=>{
+    db.collection('drinks-api').find().toArray()
+    .then(data => {
+        console.log(data)
+        response.json(data)
+    })
+    //console.log(request.body)
+    //const infoToDisplay = await db.collection('drinks-api').find().toArray()
+    //console.log(infoToDisplay)
+    .catch(error => console.error(error))
+})
 
 app.post('/addCocktail', (request, response) => {
     db.collection('drinks-api').insertOne({name: request.body.name,
@@ -59,8 +71,8 @@ app.put('/addOneLike', (request, response) => {
 app.delete('/deleteDrink', (request, response) => {
     db.collection('drinks-api').deleteOne({name: request.body.nameS})
     .then(result => {
-        console.log('Rapper Deleted')
-        response.json('Rapper Deleted')
+        console.log('Drink Deleted')
+        response.json('Drink Deleted')
     })
     .catch(error => console.error(error))
 

@@ -1,5 +1,6 @@
 const deleteText = document.querySelectorAll('.fa-trash')
 const thumbText = document.querySelectorAll('.fa-thumbs-up')
+const nameText = document.querySelectorAll('.drinkName')
 
 Array.from(deleteText).forEach((element)=>{
     element.addEventListener('click', deleteDrink)
@@ -7,6 +8,9 @@ Array.from(deleteText).forEach((element)=>{
 
 Array.from(thumbText).forEach((element)=>{
     element.addEventListener('click', addLike)
+})
+Array.from(nameText).forEach((element)=>{
+    element.addEventListener('click', displayInfo)
 })
 
 
@@ -57,3 +61,23 @@ async function addLike(){
         console.log(err)
     }
 }
+
+function displayInfo(){
+    fetch('/displayInfo')
+        .then(res => res.json())
+        .then(res => {
+            console.log(res)
+        })
+}
+// //trying to set up console.log for data from api
+// async function displayInfo(){
+//     //const sName = this.parentNode.childNodes[1].innerText
+//     try{
+      
+//         const data = await response.json()//.stringify()
+//         console.log(data)
+//         location.reload()
+//     }catch(err){
+//         console.log(err)
+//     }
+// }
